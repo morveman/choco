@@ -1,0 +1,18 @@
+
+
+-> change "Change" button to actual styled button // DONE
+-> implement javascript game // DONE
+-> make site so it scales for all resolutions // DONE
+-> recheck autoplay? // DONE
+
+-> make it so when you click outisde the modal it closes
+-> make it so when start game button is clicked => "Apply" button does nothing // DONE
+
+-> make it so the AI only plays when the checkbox in the settings is checked // DONE
+-> make it so the difficulty slider actually sets the difficulty // DONE
+-> add working "now playing" for each player or ai // DONE
+-> if count of 1's in choco array = 1 then stop game // DONE
+
+-> make a end screen + an  error screen // DONE
+
+-> fix the bugs with the ia // DONE
