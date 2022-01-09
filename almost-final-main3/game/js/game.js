@@ -350,15 +350,28 @@ function IA_checked(newGrid){
       newGrid = IA_play(diff_IA);
         if (NombrePosition(newGrid) == 0){
           // fin de la partie: le joueur gagne
-          setTimeout(() => {showEndSreen("You have won! Well played!",1);}, 200);
+          setTimeout(() => {
+            showEndSreen("You have won! Well played!",1);
+            document.getElementById("playingP1").classList.add("visible");
+            document.getElementById("playingP2_AI").classList.remove("visible");
+            //changes the value "NOW PLAYING" displayed under the name of each player to "WINNER" if they won
+            $("div#playingP1").text("WINNER!");
+          }, 200);
 
       }
       show_player();
-      playTurn();
+      if (NombrePosition(newGrid) !== 0){
+        playTurn();
+      }
     }, 1000);
   }else{
     //showEndSreen
-    setTimeout(() => {showEndSreen("The IA won! Sorry... ",1);}, 200);
+    setTimeout(() => {
+      showEndSreen("The IA won! Sorry... ",1);
+      document.getElementById("playingP1").classList.remove("visible");
+      document.getElementById("playingP2_AI").classList.add("visible");
+      $("div#playingP2_AI").text("WINNER!");
+    }, 200);
   }
 };
 
